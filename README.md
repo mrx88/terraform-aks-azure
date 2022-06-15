@@ -15,11 +15,6 @@ terraform plan
 terraform apply
 ```
 
-Assign role to service principal for reading ACR:
-```
-az role assignment create --assignee <ID> --scope /subscriptions/<subsciption id>/resourceGroups/acr-dev/providers/Microsoft.ContainerRegistry/registries/acrdev88registry --role Reader
-```
-
 ## Kubernetes Cluster
 
 
@@ -39,7 +34,3 @@ terraform init
 terraform plan
 terraform apply
 ```
-
-# TODO
-
-* Assign role to SP automatically for reading ACR,  use terraform resources (azurerm_role_assignment/azurerm_role_definition)
