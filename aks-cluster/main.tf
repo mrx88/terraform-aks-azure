@@ -19,7 +19,7 @@ resource "azurerm_subnet" "appsubnet" {
   address_prefixes     = var.vnetsubnet
 }
 
-resource "azurerm_kubernetes_cluster" "kube {
+resource "azurerm_kubernetes_cluster" "kube" {
   name                = "${var.prefix}-k8s"
   location            = azurerm_resource_group.kube.location
   resource_group_name = azurerm_resource_group.kube.name
