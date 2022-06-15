@@ -22,6 +22,6 @@ resource "azuread_service_principal" "appname" {
 
 resource "azurerm_role_assignment" "appname" {
   role_definition_name = "Reader"
-  scope = azurerm_container_registry.acr.id
-  principal_id = azuread_service_principal.appname.id
+  scope                = azurerm_container_registry.acr.id
+  principal_id         = azuread_service_principal.appname.id
 }
