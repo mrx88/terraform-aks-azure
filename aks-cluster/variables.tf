@@ -17,10 +17,20 @@ variable "kubernetes_client_secret" {
 
 variable "sku" {
   description = "The SKU of the AKS nodes"
-  default = "Standard_B2s"
+  default     = "Standard_B2s"
 }
 
 variable "environment" {
   description = "The Environment of the AKS cluster"
-  default = "dev"
+  default     = "dev"
+}
+
+variable "vnetcidr" {
+  description = "The CIDR of the VNet to use for the AKS cluster"
+  default     = ["192.168.0.0/22"]
+}
+
+variable "vnetsubnet" {
+  description = "The subnet(s) of the VNet to use for the AKS cluster"
+  default     = ["192.168.0.0/24"]
 }

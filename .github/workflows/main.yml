@@ -31,7 +31,7 @@ jobs:
       run: tflint --version
 
     - name: Init TFLint
-      run: tflint --init
+      run: tflint aks-cluster/ --init && tflint container-registry/ --init
 
     - name: Run TFLint
-      run: tflint -f compact
+      run: tflint aks-cluster/ -f compact && tflint container-registry/ -f compact
