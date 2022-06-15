@@ -1,6 +1,6 @@
 variable "rgname" {
   description = "Resource Group name for Azure Container Registry resources"
-  default = "acr-dev"
+  default = "acrdevtest"
 }
 
 variable "location" {
@@ -10,10 +10,14 @@ variable "location" {
 
 variable "registryname" {
   description = "Azure Container Registry name"
-  default = "acrdev88registry"
+  default = "acrdevtest88registry"
 }
 
-variable "sp_name" {
-  description = "Service Principal name"
-  default = "aks-cluster-dev"
+variable "sku" {
+  description = "The SKU of the Azure Container Registry"
+  default = "Basic"
+}
+
+variable "tenant_id" {
+  description = "Tenant ID for Azure AD" 
 }

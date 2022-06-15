@@ -14,3 +14,13 @@ variable "kubernetes_client_id" {
 variable "kubernetes_client_secret" {
   description = "The Client Secret for the Service Principal to use for this Managed Kubernetes Cluster"
 }
+
+variable "sku" {
+  description = "The SKU of the AKS nodes"
+  default = "Standard_B2s"
+}
+
+variable "environment" {
+  description = "The Environment of the AKS cluster"
+  default = "dev"
+}
