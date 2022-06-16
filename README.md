@@ -3,7 +3,6 @@ Terraform code for provisioning managed Azure Container Registry (ACR) and Azure
 
 # Deployment
 
-Terraform state is kept in Azure storage (backend.tf).
 
 ## Container Registry
 
