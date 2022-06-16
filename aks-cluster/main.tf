@@ -26,7 +26,7 @@ resource "azurerm_kubernetes_cluster" "kube" {
   dns_prefix          = "${var.prefix}-k8s"
 
   default_node_pool {
-    node_count     = 1
+    node_count     = var.node_count
     name           = "default"
     vm_size        = var.sku
     vnet_subnet_id = azurerm_subnet.appsubnet.id

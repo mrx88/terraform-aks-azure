@@ -34,3 +34,8 @@ variable "vnetsubnet" {
   description = "The subnet(s) of the VNet to use for the AKS cluster"
   default     = ["192.168.0.0/24"]
 }
+
+variable "node_count" {
+  description = "The number of nodes to use for the AKS cluster"
+  default     = 1
+}
